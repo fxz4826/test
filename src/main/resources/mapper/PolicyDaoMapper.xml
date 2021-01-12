@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xpu.test.dao.PolicyDao">
+    <!-- insert 添加操作 id="值 dao接口中的方法名“  -->
+<!--    <insert id="addPy" parameterType="policyInfo">-->
+<!--insert into tab_policy_information values(#{policyNum},#{policyAccount},#{policyName},#{policyStartDate},#{policyEndDate},#{policyDescription})-->
+<!--    </insert>-->
+    <update id="updatePy" parameterType="policyInfo">
+update tab_policy_information set policyNum=#{policyNum},holderName=#{holderName},holderSex=#{holderSex},holderId=#{holderId},holderPhone=#{holderPhone},insuredName=#{insuredName},insuredId=#{insuredId},policyMoney=#{policyMoney},policyType=#{policyType},policyStartDate=#{policyStartDate},policyYears=#{policyYears},adminName=#{adminName} where policyNum = #{policyNum}
+    </update>
+
+</mapper>
